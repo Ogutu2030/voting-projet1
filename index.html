@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting System Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Electronic Voting System</h1>
+        <nav>
+            <button id="homeBtn" class="nav-btn active">Home</button>
+            <button id="voteBtn" class="nav-btn">Vote</button>
+            <button id="resultsBtn" class="nav-btn">Results</button>
+            <button id="helpBtn" class="nav-btn">Help</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="homeSection" class="section active">
+            <h2>Welcome to Secure Electronic Voting</h2>
+            <div class="info-cards">
+                <div class="card">
+                    <h3>Candidate Information</h3>
+                    <p>View details about candidates and their platforms.</p>
+                    <button class="action-btn">View Candidates</button>
+                </div>
+                <div class="card">
+                    <h3>Voting Guide</h3>
+                    <p>Learn how to cast your vote securely.</p>
+                    <button class="action-btn">Read Guide</button>
+                </div>
+                <div class="card">
+                    <h3>Election Status</h3>
+                    <p>Check current election status and deadlines.</p>
+                    <button class="action-btn">Check Status</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Voting Section -->
+        <section id="voteSection" class="section">
+            <h2>Cast Your Vote</h2>
+            <div class="voting-area">
+                <div class="authentication">
+                    <h3>Voter Authentication</h3>
+                    <form id="authForm">
+                        <input type="text" placeholder="Voter ID" required>
+                        <input type="password" placeholder="Password" required>
+                        <button type="submit" class="primary-btn">Authenticate</button>
+                    </form>
+                </div>
+                <div class="ballot" style="display: none;">
+                    <h3>Official Ballot</h3>
+                    <form id="ballotForm">
+                        <!-- Ballot content will be dynamically loaded -->
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section id="resultsSection" class="section">
+            <h2>Election Results</h2>
+            <div class="results-container">
+                <div class="results-filters">
+                    <select id="resultType">
+                        <option value="live">Live Results</option>
+                        <option value="final">Final Results</option>
+                    </select>
+                </div>
+                <div class="results-display">
+                    <!-- Results will be dynamically loaded -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Help Section -->
+        <section id="helpSection" class="section">
+            <h2>Help & Support</h2>
+            <div class="help-content">
+                <div class="faq">
+                    <h3>Frequently Asked Questions</h3>
+                    <div class="faq-item">
+                        <h4>How do I verify my voter registration?</h4>
+                        <p>Click on the "Check Status" button on the home page and enter your voter ID.</p>
+                    </div>
+                    <!-- More FAQ items -->
+                </div>
+                <div class="contact">
+                    <h3>Contact Support</h3>
+                    <form id="supportForm">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Email Address" required>
+                        <textarea placeholder="Your Message" required></textarea>
+                        <button type="submit" class="primary-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 @Electronic Voting System. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
